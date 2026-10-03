@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solicitation Analyzer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Young+Serif&display=swap">
+<style>
+:root{color-scheme:light;--page:#f9f9f7;--surface:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--line:rgba(11,11,11,.12);--wash:rgba(11,11,11,.04);--accent:#1c5cab;--accent-ink:#fff;--bad:#a12626}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--ink:#fff;--ink2:#c3c2b7;--line:rgba(255,255,255,.12);--wash:rgba(255,255,255,.05);--accent:#86b6ef;--accent-ink:#0b0b0b;--bad:#ff8a8a}}
+:root[data-theme=dark]{color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--ink:#fff;--ink2:#c3c2b7;--line:rgba(255,255,255,.12);--wash:rgba(255,255,255,.05);--accent:#86b6ef;--accent-ink:#0b0b0b;--bad:#ff8a8a}
+*{box-sizing:border-box}body{margin:0;background:var(--page);color:var(--ink);font:400 16px/1.55 "Atkinson Hyperlegible Next",system-ui,sans-serif}
+main{max-width:880px;margin:0 auto;padding:40px 16px 64px}
+.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin:0 0 10px}
+h1{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:clamp(2rem,5vw,2.8rem);line-height:1.1;margin:0 0 12px}
+.lede{font-size:1.1rem;margin:0 0 28px;max-width:62ch}
+.drop{display:block;border:2px dashed var(--line);border-radius:14px;padding:36px 20px;text-align:center;background:var(--surface);cursor:pointer;transition:background .15s,border-color .15s}
+.drop:hover,.drop.over{background:var(--wash);border-color:var(--accent)}
+.drop strong{display:block;font-size:1.15rem}.drop span{color:var(--ink2)}
+.drop input{position:absolute;opacity:0;width:1px;height:1px}
+.files{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:8px}
+.files li{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.files .name{font-weight:600;overflow-wrap:anywhere}.files .size{color:var(--ink2);font-size:.85rem;font-weight:400;margin-left:6px}
+select,input[type=text]{font:inherit;color:inherit;background:var(--page);border:1px solid var(--line);border-radius:8px;height:38px;padding:0 10px}
+.remove{border:0;background:none;color:var(--ink2);font:inherit;cursor:pointer;padding:6px}
+.row{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin-top:20px}
+.row label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:700;color:var(--ink2);flex:1 1 280px}
+.row input{width:100%}
+button.go{height:44px;padding:0 22px;border:0;border-radius:10px;background:var(--accent);color:var(--accent-ink);font:inherit;font-weight:700;cursor:pointer}
+button.go:disabled{opacity:.45;cursor:not-allowed}
+.status{margin-top:24px;padding:16px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.status[hidden]{display:none}.status .err{color:var(--bad);font-weight:700}
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;margin-right:8px;vertical-align:-2px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spinner{animation:none}}
+.open{display:inline-block;margin-top:10px;font-weight:700;color:var(--accent)}
+iframe{width:100%;height:900px;border:1px solid var(--line);border-radius:12px;margin-top:16px;background:var(--page)}
+footer{margin-top:40px;color:var(--ink2);font-size:.85rem}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow" id="where">Runs on this computer</p>
+  <h1>Solicitation Analyzer</h1>
+  <p class="lede">Drop in an RFP, RFQ or RFI with its amendments. You get the deadlines, submission rules, evaluation factors and requirements as a checklist, and every item quotes the page it came from.</p>
+
+  <label class="drop" id="drop">
+    <input type="file" id="picker" accept="application/pdf,.pdf" multiple>
+    <strong>Choose PDFs or drop them here</strong>
+    <span>The solicitation, plus any amendments and attachments</span>
+  </label>
+  <ul class="files" id="files" aria-label="Selected files"></ul>
+
+  <div class="row">
+    <label>Title for the report (optional)<input type="text" id="title" placeholder="e.g. ESD Pre-Qualified IT Providers RFP"></label>
+    <button class="go" id="go" disabled>Build checklist</button>
+  </div>
+
+  <div class="status" id="status" hidden aria-live="polite"></div>
+  <footer id="foot">Reports are saved in runs/uploads on this computer.</footer>
+</main>
+<script>
+const $ = (s) => document.querySelector(s);
+const files = [];
+const roleFor = (name, i) => i === 0 ? "base" : /amend|addend|revis/i.test(name) ? "amendment" : "attachment";
+const kb = (n) => n > 1048576 ? `${(n / 1048576).toFixed(1)} MB` : `${Math.round(n / 1024)} KB`;
+
+fetch("/api/info").then((r) => r.json()).then((info) => {
+  $("#where").textContent = info.local ? `Runs on this computer · ${info.model}` : `Hosted model · ${info.model}`;
+  $("#foot").textContent = info.local
+    ? "The model runs on this computer, so documents never leave it. Reports are saved in runs/uploads."
+    : "Documents are sent to the hosted model provider. Reports are saved in runs/uploads.";
+}).catch(() => {});
+
+function render() {
+  const list = $("#files");
+  list.replaceChildren();
+  files.forEach((f, i) => {
+    const li = document.createElement("li");
+    const name = document.createElement("span");
+    name.className = "name";
+    name.textContent = f.file.name;
+    const size = document.createElement("span");
+    size.className = "size";
+    size.textContent = kb(f.file.size);
+    name.appendChild(size);
+    const role = document.createElement("select");
+    role.setAttribute("aria-label", `Role of ${f.file.name}`);
+    for (const [v, t] of [["base", "Solicitation"], ["amendment", "Amendment"], ["attachment", "Attachment"]]) role.add(new Option(t, v, false, f.role === v));
+    role.addEventListener("change", () => { f.role = role.value; check(); });
+    const rm = document.createElement("button");
+    rm.className = "remove";
+    rm.textContent = "Remove";
+    rm.addEventListener("click", () => { files.splice(i, 1); render(); });
+    li.append(name, role, rm);
+    list.appendChild(li);
+  });
+  check();
+}
+
+function check() {
+  $("#go").disabled = files.filter((f) => f.role === "base").length !== 1;
+}
+
+function add(list) {
+  for (const file of list) if (/\.pdf$/i.test(file.name) || file.type === "application/pdf") files.push({ file, role: roleFor(file.name, files.length) });
+  render();
+}
+
+$("#picker").addEventListener("change", (e) => add(e.target.files));
+const drop = $("#drop");
+drop.addEventListener("dragover", (e) => { e.preventDefault(); drop.classList.add("over"); });
+drop.addEventListener("dragleave", () => drop.classList.remove("over"));
+drop.addEventListener("drop", (e) => { e.preventDefault(); drop.classList.remove("over"); add(e.dataTransfer.files); });
+
+const asBase64 = (file) => new Promise((ok, fail) => {
+  const r = new FileReader();
+  r.onload = () => ok(String(r.result).split(",")[1]);
+  r.onerror = () => fail(r.error);
+  r.readAsDataURL(file);
+});
+
+function show(text, { busy = false, error = false, link = null } = {}) {
+  const box = $("#status");
+  box.hidden = false;
+  box.replaceChildren();
+  const p = document.createElement("div");
+  if (busy) { const s = document.createElement("span"); s.className = "spinner"; s.setAttribute("aria-hidden", "true"); p.appendChild(s); }
+  const t = document.createElement("span");
+  t.textContent = text;
+  if (error) t.className = "err";
+  p.appendChild(t);
+  box.appendChild(p);
+  if (link) {
+    const a = Object.assign(document.createElement("a"), { className: "open", href: link, target: "_blank", rel: "noopener", textContent: "Open the checklist in a new tab" });
+    const frame = Object.assign(document.createElement("iframe"), { src: link, title: "Checklist" });
+    box.append(a, frame);
+  }
+}
+
+$("#go").addEventListener("click", async () => {
+  $("#go").disabled = true;
+  show("Uploading", { busy: true });
+  try {
+    const payload = { title: $("#title").value, files: await Promise.all(files.map(async (f) => ({ name: f.file.name, role: f.role, data: await asBase64(f.file) }))) };
+    const res = await fetch("/api/jobs", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+    const body = await res.json();
+    if (!res.ok) throw new Error(body.error || res.statusText);
+    poll(body.job);
+  } catch (err) {
+    show(String(err.message || err), { error: true });
+    check();
+  }
+});
+
+async function poll(id) {
+  const job = await (await fetch(`/api/jobs/${id}`)).json();
+  if (job.status === "running") { show(job.progress || "Working", { busy: true }); setTimeout(() => poll(id), 1500); return; }
+  if (job.status === "failed") { show(job.error, { error: true }); check(); return; }
+  show(`Done: ${job.progress}.`, { link: job.report });
+  check();
+}
+</script>
+</body>
+</html>

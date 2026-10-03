@@ -1,0 +1,27 @@
+{
+  "package": "usgs-shakealert",
+  "facts": {
+    "response_due": {"date": "2026-10-16", "time": "12:00", "page": 2},
+    "questions_due": null,
+    "submission_method": {"any": ["email", "e-mail", "emailed"], "page": 2},
+    "page_limit": null,
+    "basis_of_award": null,
+    "set_aside": null,
+    "naics": null
+  },
+  "evaluation_factors": [],
+  "checklist": [
+    {"id": "socioeconomic", "text": "State the applicable socioeconomic designation", "all": [["socioeconomic"]]},
+    {"id": "size", "text": "State the business size standard", "all": [["size"]]},
+    {"id": "uei", "text": "Give the SAM UEI number", "all": [["uei"]]},
+    {"id": "gsa", "text": "Give a GSA contract number if applicable", "all": [["gsa"]]},
+    {"id": "ability", "text": "State the ability to execute all listed tasks", "all": [["ability", "able to"], ["task"]]},
+    {"id": "capability", "text": "Submit a capability statement and general approach", "all": [["capabilit"], ["approach"]]},
+    {"id": "pdf", "text": "Submit electronically in PDF format", "all": [["pdf"]]},
+    {"id": "subject", "text": "Use the required email subject line", "all": [["subject"]]},
+    {"id": "no-phone", "text": "No telephone, mail or fax responses", "all": [["telephone", "fax"]]},
+    {"id": "no-marketing", "text": "General marketing material is not responsive", "all": [["marketing"]]},
+    {"id": "cicd", "text": "Implement a baseline CI/CD pipeline in GitLab, not only recommend it (SOW)", "all": [["ci/cd", "pipeline"], ["gitlab", "implement"]]},
+    {"id": "module-review", "text": "Review the source code of every production module (SOW)", "all": [["module"], ["review"]]}
+  ]
+}

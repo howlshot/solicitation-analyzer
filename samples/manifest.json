@@ -1,0 +1,131 @@
+{
+  "note": "Public solicitations used as the test set. The PDFs are not committed; scripts/fetch_samples.py downloads them from these links.",
+  "documents": [
+    {
+      "id": "esd-it-prequal",
+      "title": "ESD Pre-Qualified Providers of Information Technology Goods and Services RFP",
+      "issuer": "Empire State Development (NYS)",
+      "kind": "RFP",
+      "file": "esd-it-prequal.pdf",
+      "url": "https://esd.ny.gov/sites/default/files/media/document/PreQualifiedProvidersofITGoodsServiceRFP.pdf",
+      "page": "https://esd.ny.gov/doing-business-ny/requests-proposals/pre-qualified-providers-information-technology-goods-and",
+      "short": "RFP"
+    },
+    {
+      "id": "esd-it-prequal-add2",
+      "title": "ESD Pre-Qualified IT Providers RFP, Addendum 2: Revised Schedule of Dates",
+      "issuer": "Empire State Development (NYS)",
+      "kind": "Addendum",
+      "amends": "esd-it-prequal",
+      "file": "esd-it-prequal-add2.pdf",
+      "url": "https://esd.ny.gov/sites/default/files/media/document/Addendum2-RevisedScheduleofDates.pdf",
+      "page": "https://esd.ny.gov/doing-business-ny/requests-proposals/pre-qualified-providers-information-technology-goods-and",
+      "short": "Addendum 2"
+    },
+    {
+      "id": "nysed-24-026",
+      "title": "NYSED RFP #24-026: Audit Management Solution Software",
+      "issuer": "New York State Education Department",
+      "kind": "RFP",
+      "file": "nysed-24-026.pdf",
+      "url": "https://www.nysed.gov/sites/default/files/programs/funding-opportunities/rfp-24-026.pdf",
+      "page": "https://www.nysed.gov/funding-opportunities/rfp-24-026-audit-management-solution-software-office-audit-services",
+      "short": "RFP"
+    },
+    {
+      "id": "usgs-shakealert-rfi",
+      "title": "USGS ShakeAlert Code Review RFI 140G0326Q0223",
+      "issuer": "U.S. Geological Survey",
+      "kind": "RFI",
+      "file": "usgs-shakealert-rfi.pdf",
+      "url": "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/cc3277e84d5645d6bc7def88cbda16ae/download",
+      "page": "https://sam.gov/opp/7addd373195d41a2af0606880e4cbf4a/view",
+      "short": "RFI"
+    },
+    {
+      "id": "usgs-shakealert-sow",
+      "title": "USGS ShakeAlert Code Review RFI, Statement of Work",
+      "issuer": "U.S. Geological Survey",
+      "kind": "SOW",
+      "attachment_of": "usgs-shakealert-rfi",
+      "file": "usgs-shakealert-sow.pdf",
+      "url": "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/6b1b42353b434d8b87237416f4fc01f8/download",
+      "page": "https://sam.gov/opp/7addd373195d41a2af0606880e4cbf4a/view",
+      "short": "Statement of Work"
+    },
+    {
+      "id": "af-tdl-rfq",
+      "title": "Air Force TDL Interoperability Software and Training, Combined Synopsis/Solicitation v4",
+      "issuer": "U.S. Air Force (ACC A589)",
+      "kind": "RFQ",
+      "file": "af-tdl-rfq.pdf",
+      "url": "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/498a7411e78f4dd9aecf9cce2c8ca179/download",
+      "page": "https://sam.gov/opp/171d12b7248f4e4f9822cfd7c3744416/view",
+      "short": "Original solicitation"
+    },
+    {
+      "id": "af-tdl-rfq-amd2",
+      "title": "Air Force TDL Interoperability Software and Training, Amendment 2",
+      "issuer": "U.S. Air Force (ACC A589)",
+      "kind": "Amendment",
+      "amends": "af-tdl-rfq",
+      "file": "af-tdl-rfq-amd2.pdf",
+      "url": "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/c616c18c97464cc887fadfbc487f0305/download",
+      "page": "https://sam.gov/opp/171d12b7248f4e4f9822cfd7c3744416/view",
+      "short": "Amendment 2"
+    },
+    {
+      "id": "ihs-75h70626r00032",
+      "title": "IHS Software Maintenance and Support Subscription, Solicitation 75H70626R00032 (SDVOSB set-aside)",
+      "issuer": "Indian Health Service",
+      "kind": "RFP",
+      "file": "ihs-75h70626r00032.pdf",
+      "url": "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/fbddba8764e44aefaad2a8a8828c9362/download",
+      "page": "https://sam.gov/opp/1fe1c05793c449089aebd8d0f0213701/view",
+      "short": "Solicitation"
+    }
+  ],
+  "packages": [
+    {
+      "id": "esd-it-prequal",
+      "title": "ESD Pre-Qualified Providers of IT Goods and Services RFP",
+      "base": "esd-it-prequal",
+      "amendments": [
+        "esd-it-prequal-add2"
+      ],
+      "attachments": []
+    },
+    {
+      "id": "nysed-24-026",
+      "title": "NYSED RFP #24-026: Audit Management Solution Software",
+      "base": "nysed-24-026",
+      "amendments": [],
+      "attachments": []
+    },
+    {
+      "id": "usgs-shakealert",
+      "title": "USGS ShakeAlert Code Review RFI",
+      "base": "usgs-shakealert-rfi",
+      "amendments": [],
+      "attachments": [
+        "usgs-shakealert-sow"
+      ]
+    },
+    {
+      "id": "af-tdl",
+      "title": "Air Force TDL Interoperability Software RFP (FA489026Q0016)",
+      "base": "af-tdl-rfq",
+      "amendments": [
+        "af-tdl-rfq-amd2"
+      ],
+      "attachments": []
+    },
+    {
+      "id": "ihs-75h70626r00032",
+      "title": "IHS Telecom Software Support Subscription (SDVOSB set-aside)",
+      "base": "ihs-75h70626r00032",
+      "amendments": [],
+      "attachments": []
+    }
+  ]
+}

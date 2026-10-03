@@ -1,0 +1,34 @@
+{
+  "package": "esd-it-prequal",
+  "note": "Addendum 2 moved the proposal deadline from August 7 to August 13, 2026.",
+  "facts": {
+    "response_due": {"date": "2026-08-13", "time": "14:00", "page": 1, "document": "esd-it-prequal-add2", "superseded": "2026-08-07"},
+    "questions_due": {"date": "2026-07-08", "time": null, "page": 6},
+    "submission_method": {"any": ["dropbox"], "page": 2},
+    "page_limit": null,
+    "basis_of_award": {"any": ["best value", "weighted", "points", "highest"], "page": 9},
+    "set_aside": null,
+    "naics": null
+  },
+  "evaluation_factors": [
+    {"name": ["technical approach"], "weight": "30"},
+    {"name": ["cost"], "weight": "20"},
+    {"name": ["experience"], "weight": "30"},
+    {"name": ["staffing"], "weight": "15"},
+    {"name": ["quantitative", "mwbe", "sdvob"], "weight": "5"}
+  ],
+  "checklist": [
+    {"id": "folder-naming", "text": "Name the main folder company name - RFP title - date of submission", "all": [["folder", "naming"]]},
+    {"id": "two-part", "text": "Submit a two-part proposal: technical and administrative", "all": [["administrative", "two-part", "two part"]]},
+    {"id": "no-email", "text": "Fax, hard copy and email submissions are not accepted", "all": [["fax", "facsimile", "hardcop", "hard cop"]]},
+    {"id": "cover-page", "text": "Technical proposal starts with a cover page with contact information", "all": [["cover page"]]},
+    {"id": "cost-proposal", "text": "Provide a cost proposal", "all": [["cost proposal", "cost of services"]]},
+    {"id": "vendrep", "text": "File the Vendor Responsibility Questionnaire", "all": [["vendor responsibility"]]},
+    {"id": "non-collusive", "text": "Non-Collusive Bidding Certification", "all": [["collusive"]]},
+    {"id": "st-220", "text": "Form ST-220-CA, State Tax Law 5-a certification", "all": [["st-220", "5-a"]]},
+    {"id": "mwbe-cert", "text": "Provide the NYS MWBE or SDVOB certificate to earn quantitative points", "all": [["certif"], ["mwbe", "sdvob"]]},
+    {"id": "mwbe-goal", "text": "MWBE participation goal (30% agency-wide)", "all": [["30%", "30 percent", "goal"], ["mwbe"]]},
+    {"id": "insurance", "text": "Meet the insurance requirements", "all": [["insurance"]]},
+    {"id": "questions-email", "text": "Send questions by email to the designated address", "all": [["question"], ["email", "e-mail"]]}
+  ]
+}

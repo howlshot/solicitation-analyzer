@@ -1,0 +1,33 @@
+{
+  "package": "nysed-24-026",
+  "facts": {
+    "response_due": {"date": "2026-01-13", "time": null, "page": 1},
+    "questions_due": {"date": "2025-12-23", "time": null, "page": 1},
+    "submission_method": {"any": ["online form"], "page": 1},
+    "page_limit": {"any": ["25"], "page": 16},
+    "basis_of_award": {"any": ["highest", "aggregate"], "page": 19},
+    "set_aside": null,
+    "naics": null
+  },
+  "evaluation_factors": [
+    {"name": ["technical"], "weight": "70"},
+    {"name": ["cost", "financial"], "weight": "30"},
+    {"name": ["qualifications and experience", "general qualifications"], "weight": "30"},
+    {"name": ["project approach"], "weight": "20"},
+    {"name": ["technical qualifications", "security"], "weight": "20"}
+  ],
+  "checklist": [
+    {"id": "four-files", "text": "Submit four labeled documents: submission documents, technical proposal, cost proposal, M/WBE documents", "all": [["label"]]},
+    {"id": "ms-office", "text": "Technical and cost proposals in Microsoft Office, not scanned PDF", "all": [["microsoft", "office"]]},
+    {"id": "signatures", "text": "Sign submission documents with an accepted electronic signature method", "all": [["sign"]]},
+    {"id": "no-cost-in-tech", "text": "Keep cost information out of the technical proposal", "all": [["cost"], ["technical proposal"], ["not", "must not", "exclude"]]},
+    {"id": "whole-dollars", "text": "Budgets in whole dollars", "all": [["whole dollar"]]},
+    {"id": "mwbe-goal", "text": "M/WBE goal of 30% (17% MBE, 13% WBE)", "all": [["30%", "30 percent"], ["m/wbe", "mwbe", "minority"]]},
+    {"id": "sdvob-goal", "text": "SDVOB participation goal of 6%", "all": [["6%", "6 percent"], ["sdvob", "service-disabled", "veteran"]]},
+    {"id": "mwbe-forms", "text": "Submit M/WBE 100 Utilization Plan, M/WBE 102 and EEO 100", "all": [["utilization plan", "m/wbe 100", "eeo 100"]]},
+    {"id": "subcontracting-cap", "text": "Subcontracting limited to 30% of the contract budget", "all": [["subcontract"], ["30%", "thirty percent"]]},
+    {"id": "uptime", "text": "Platform must maintain 99.9% uptime", "all": [["99.9"]]},
+    {"id": "foil", "text": "Request FOIL exemption on the provided form for confidential material", "all": [["freedom of information", "foil", "exemption"]]},
+    {"id": "rfp-number", "text": "Include the RFP number and title on the online form", "all": [["rfp number", "24-026"], ["title", "online form"]]}
+  ]
+}

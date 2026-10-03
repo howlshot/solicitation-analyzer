@@ -1,0 +1,7 @@
+samples/*.pdf
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+runs/
+_site/

@@ -1,0 +1,29 @@
+{
+  "package": "ihs-75h70626r00032",
+  "facts": {
+    "response_due": {"date": "2026-10-26", "time": "17:00", "page": 1},
+    "questions_due": {"date": "2026-10-13", "time": "12:00", "page": 4},
+    "submission_method": {"any": ["email", "e-mail"], "page": 4},
+    "page_limit": null,
+    "basis_of_award": {"any": ["lowest price technically acceptable", "lpta"], "page": 2},
+    "set_aside": {"any": ["service-disabled", "sdvosb", "service disabled"], "page": 1},
+    "naics": {"any": ["541519"], "page": 1}
+  },
+  "evaluation_factors": [
+    {"name": ["technical"], "weight": null},
+    {"name": ["past performance"], "weight": null},
+    {"name": ["price"], "weight": null}
+  ],
+  "checklist": [
+    {"id": "letterhead", "text": "Submit the quote on company letterhead, signed and dated", "all": [["letterhead"]]},
+    {"id": "sf1449", "text": "Complete the SF1449", "all": [["1449"]]},
+    {"id": "all-inclusive", "text": "Quoted unit prices are all-inclusive, including travel", "all": [["inclusive"]]},
+    {"id": "tech-description", "text": "Technical description in enough detail to evaluate compliance", "all": [["technical description", "technical capability"]]},
+    {"id": "past-perf", "text": "Past performance: recent, relevant CPARs", "all": [["past performance", "cpar"]]},
+    {"id": "price-schedule", "text": "Completed price schedule sheet", "all": [["price schedule"]]},
+    {"id": "amendments", "text": "Acknowledge any solicitation amendments", "all": [["amendment"]]},
+    {"id": "terms", "text": "State the extent of agreement with all terms and conditions", "all": [["terms"], ["condition"]]},
+    {"id": "sam-uei", "text": "Have a UEI and TIN and be registered in SAM", "all": [["sam", "uei"]]},
+    {"id": "no-discussions", "text": "Award may be made without discussions, so the first offer should be the best", "all": [["discussion"]]}
+  ]
+}

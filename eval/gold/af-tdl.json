@@ -1,0 +1,31 @@
+{
+  "package": "af-tdl",
+  "note": "Amendment 2 restates the whole solicitation. Pages refer to it unless marked.",
+  "facts": {
+    "response_due": {"date": "2026-10-10", "time": "13:00", "page": 2},
+    "questions_due": {"date": "2026-09-04", "time": "15:00", "page": 3},
+    "submission_method": {"any": ["email", "e-mail"], "page": 3},
+    "page_limit": {"any": ["30"], "page": 4},
+    "basis_of_award": {"any": ["lowest price technically acceptable", "lpta", "lowest priced proposal"], "page": 2},
+    "set_aside": {"any": ["not set-aside", "not set aside", "unrestricted", "set-aside: no", "no small business set"], "page": 1},
+    "naics": {"any": ["541511"], "page": 2}
+  },
+  "evaluation_factors": [
+    {"name": ["technical"], "weight": null},
+    {"name": ["price"], "weight": null}
+  ],
+  "checklist": [
+    {"id": "volumes", "text": "Submit two separate volumes, Technical and Price, as separately labeled files", "all": [["technical"], ["price"], ["volume"]]},
+    {"id": "font", "text": "Font no smaller than Times New Roman 10", "all": [["10"], ["font", "times new roman"]]},
+    {"id": "margins", "text": "Margins no smaller than 1/2 inch", "all": [["margin"]]},
+    {"id": "file-types", "text": "Submit in PDF or Word (.docx)", "all": [["pdf"], ["docx", "word"]]},
+    {"id": "sam", "text": "Be registered in SAM at the time of proposal submission", "all": [["sam"], ["regist"]]},
+    {"id": "question-matrix", "text": "Submit questions on the Question-Comment Matrix", "all": [["matrix"]]},
+    {"id": "screenshots", "text": "Include functional screenshots and workflow diagrams for sub-factors 1 and 2", "all": [["screenshot"]]},
+    {"id": "cots", "text": "Offer existing commercial off-the-shelf software; untested AI-generated software is not accepted", "all": [["cots", "commercial off", "off the shelf", "off-the-shelf"]]},
+    {"id": "price-narrative", "text": "Include a price narrative in the Price volume", "all": [["narrative"]]},
+    {"id": "cover-letter", "text": "Price volume cover page with UEI, CAGE, business size and points of contact", "all": [["cage", "uei"]]},
+    {"id": "valid-until", "text": "State that the proposal is valid until 1 December 2026", "all": [["valid"], ["december", "2026-12-01"]]},
+    {"id": "clin", "text": "Price according to the CLIN structure", "all": [["clin"]]}
+  ]
+}

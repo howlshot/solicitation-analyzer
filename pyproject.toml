@@ -1,0 +1,18 @@
+[project]
+name = "solicitation-analyzer"
+version = "0.1.0"
+description = "Turn an RFP, RFQ or RFI PDF into a compliance checklist where every item quotes the page it cites."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = []
+authors = [{ name = "Studio Chingie LLC" }]
+
+[project.scripts]
+solicitation-analyzer = "solicitation_analyzer.__main__:main"
+
+[tool.setuptools]
+packages = ["solicitation_analyzer"]
+
+[tool.setuptools.package-data]
+solicitation_analyzer = ["static/*.html"]
