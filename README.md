@@ -39,6 +39,16 @@ The test set is 8 public documents in 5 packages: two New York State RFPs, a fed
 
 Full per-package results: [`eval/RESULTS.md`](eval/RESULTS.md). Browse the sample reports at **https://howlshot.github.io/solicitation-analyzer/** (saved outputs; nothing runs and no key is needed).
 
+## Models tested
+
+| | Qwen 3.8 27B (LM Studio) | Qwen3.8-Flash-Next (mlx-serve) |
+|---|---:|---:|
+| Key facts right | 34/35 | 34/35 |
+| Must-do items covered | 57/58 | 55/58 |
+| Time for all 129 pages | ~49 min | ~21 min |
+
+Same accuracy within a couple of items; Flash-Next is about twice as fast. The sample reports above use the 27B. Flash-Next results: [`eval/flash-next/`](eval/flash-next).
+
 ## How it works
 
 ```
@@ -78,6 +88,8 @@ python3 -m solicitation_analyzer analyze RFP.pdf --amendment Addendum-1.pdf --at
 ```bash
 python3 -m solicitation_analyzer serve --parallel 4
 ```
+
+**mlx-serve.** Add `--base-url http://127.0.0.1:1237/v1 --model <id>` and set `JSON_SCHEMA_MODE=prompt`. Its schema-enforced output runs about 7 times slower.
 
 **Hosted model.** Set `ANTHROPIC_API_KEY` in your environment and add `--provider anthropic`. The published results do not use it.
 

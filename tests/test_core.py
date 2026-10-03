@@ -198,6 +198,10 @@ class Model(unittest.TestCase):
     def test_parse_json_tolerates_fences_and_prose(self):
         self.assertEqual(parse_json('Sure:\n```json\n{"items": []}\n```'), {"items": []})
 
+    def test_parse_json_collects_unwrapped_items(self):
+        reply = '{"kind": "page_limit", "quote": "30 pages"}\n{"kind": "formatting", "quote": "font 10"}'
+        self.assertEqual(len(parse_json(reply)["items"]), 2)
+
     def test_to_item_rejects_unknown_kinds_and_empty_quotes(self):
         self.assertIsNone(to_item({"kind": "vibes", "quote": "x"}, "d", "base"))
         self.assertIsNone(to_item({"kind": "page_limit", "quote": ""}, "d", "base"))

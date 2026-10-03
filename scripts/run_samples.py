@@ -27,6 +27,7 @@ def main() -> None:
     parser.add_argument("--model")
     parser.add_argument("--base-url")
     parser.add_argument("--parallel", type=int, default=1)
+    parser.add_argument("--out", default="reports", help="Folder for the reports; default reports/.")
     args = parser.parse_args()
 
     manifest = json.loads((ROOT / "samples/manifest.json").read_text())
@@ -43,7 +44,7 @@ def main() -> None:
         started = time.monotonic()
         package = [doc(pkg["base"], "base")] + [doc(a, "amendment") for a in pkg["amendments"]] + [doc(a, "attachment") for a in pkg["attachments"]]
         result = analyze(package, provider, pkg["title"], on_progress=lambda msg: print(f"  {msg}", flush=True), parallel=args.parallel)
-        write_reports(result, ROOT / "reports" / pkg["id"], redact_contacts=True)
+        write_reports(result, ROOT / args.out / pkg["id"], redact_contacts=True)
         print(f"{pkg['id']}: {len(result.kept)} kept, {len(result.rejected)} rejected, {len(result.errors)} errors, {time.monotonic() - started:.0f}s", flush=True)
         for err in result.errors:
             print(f"  ! {err}", flush=True)

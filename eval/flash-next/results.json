@@ -1,0 +1,1389 @@
+{
+  "model": "Qwen3.8-Flash-Next-MLX-Serve-mixed-4-8bit",
+  "packages": [
+    {
+      "package": "esd-it-prequal",
+      "title": "ESD Pre-Qualified Providers of IT Goods and Services RFP",
+      "model": {
+        "facts": {
+          "response_due": {
+            "correct": true,
+            "expected": "2026-08-13",
+            "got": "2026-08-13",
+            "time_correct": true,
+            "expected_time": "14:00",
+            "got_time": "14:00"
+          },
+          "questions_due": {
+            "correct": true,
+            "expected": "2026-07-08",
+            "got": "2026-07-08"
+          },
+          "submission_method": {
+            "correct": true,
+            "expected": "dropbox",
+            "got": "Proposals must be submitted via the designated Dropbox link."
+          },
+          "page_limit": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "basis_of_award": {
+            "correct": false,
+            "expected": "best value/weighted/points/highest",
+            "got": "not found"
+          },
+          "set_aside": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "naics": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          }
+        },
+        "facts_correct": 6,
+        "facts_total": 7,
+        "times_correct": 1,
+        "times_total": 1,
+        "factors": [
+          {
+            "name": "technical approach",
+            "weight": "30",
+            "found": true
+          },
+          {
+            "name": "cost",
+            "weight": "20",
+            "found": true
+          },
+          {
+            "name": "experience",
+            "weight": "30",
+            "found": true
+          },
+          {
+            "name": "staffing",
+            "weight": "15",
+            "found": true
+          },
+          {
+            "name": "quantitative",
+            "weight": "5",
+            "found": true
+          }
+        ],
+        "factors_found": 5,
+        "factors_total": 5,
+        "checklist": [
+          {
+            "id": "folder-naming",
+            "text": "Name the main folder company name - RFP title - date of submission",
+            "found": true
+          },
+          {
+            "id": "two-part",
+            "text": "Submit a two-part proposal: technical and administrative",
+            "found": true
+          },
+          {
+            "id": "no-email",
+            "text": "Fax, hard copy and email submissions are not accepted",
+            "found": true
+          },
+          {
+            "id": "cover-page",
+            "text": "Technical proposal starts with a cover page with contact information",
+            "found": true
+          },
+          {
+            "id": "cost-proposal",
+            "text": "Provide a cost proposal",
+            "found": true
+          },
+          {
+            "id": "vendrep",
+            "text": "File the Vendor Responsibility Questionnaire",
+            "found": true
+          },
+          {
+            "id": "non-collusive",
+            "text": "Non-Collusive Bidding Certification",
+            "found": true
+          },
+          {
+            "id": "st-220",
+            "text": "Form ST-220-CA, State Tax Law 5-a certification",
+            "found": true
+          },
+          {
+            "id": "mwbe-cert",
+            "text": "Provide the NYS MWBE or SDVOB certificate to earn quantitative points",
+            "found": true
+          },
+          {
+            "id": "mwbe-goal",
+            "text": "MWBE participation goal (30% agency-wide)",
+            "found": true
+          },
+          {
+            "id": "insurance",
+            "text": "Meet the insurance requirements",
+            "found": true
+          },
+          {
+            "id": "questions-email",
+            "text": "Send questions by email to the designated address",
+            "found": true
+          }
+        ],
+        "checklist_found": 12,
+        "checklist_total": 12,
+        "items": 119
+      },
+      "baseline": {
+        "facts": {
+          "response_due": {
+            "correct": false,
+            "expected": "2026-08-13",
+            "got": "2026-08-07",
+            "time_correct": true,
+            "expected_time": "14:00",
+            "got_time": "14:00"
+          },
+          "questions_due": {
+            "correct": false,
+            "expected": "2026-07-08",
+            "got": "2026-06-29"
+          },
+          "submission_method": {
+            "correct": true,
+            "expected": "dropbox",
+            "got": "Proposals must be sent to the designated Dropbox: https://www.dropbox.com/request/oincxcu0bwqpa1r54naw"
+          },
+          "page_limit": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "basis_of_award": {
+            "correct": true,
+            "expected": "best value | weighted | points | highest",
+            "got": "The debriefing should address strengths, weaknesses, and provide other relevant information that ESD used to determine best value, including the qualitative and quantitative analysis used in assessing the relative merits"
+          },
+          "set_aside": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "naics": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          }
+        },
+        "facts_correct": 5,
+        "facts_total": 7,
+        "times_correct": 1,
+        "times_total": 1,
+        "factors": [
+          {
+            "name": "technical approach",
+            "weight": "30",
+            "found": true
+          },
+          {
+            "name": "cost",
+            "weight": "20",
+            "found": true
+          },
+          {
+            "name": "experience",
+            "weight": "30",
+            "found": true
+          },
+          {
+            "name": "staffing",
+            "weight": "15",
+            "found": true
+          },
+          {
+            "name": "quantitative",
+            "weight": "5",
+            "found": true
+          }
+        ],
+        "factors_found": 5,
+        "factors_total": 5,
+        "checklist": [
+          {
+            "id": "folder-naming",
+            "text": "Name the main folder company name - RFP title - date of submission",
+            "found": false
+          },
+          {
+            "id": "two-part",
+            "text": "Submit a two-part proposal: technical and administrative",
+            "found": true
+          },
+          {
+            "id": "no-email",
+            "text": "Fax, hard copy and email submissions are not accepted",
+            "found": true
+          },
+          {
+            "id": "cover-page",
+            "text": "Technical proposal starts with a cover page with contact information",
+            "found": false
+          },
+          {
+            "id": "cost-proposal",
+            "text": "Provide a cost proposal",
+            "found": true
+          },
+          {
+            "id": "vendrep",
+            "text": "File the Vendor Responsibility Questionnaire",
+            "found": true
+          },
+          {
+            "id": "non-collusive",
+            "text": "Non-Collusive Bidding Certification",
+            "found": true
+          },
+          {
+            "id": "st-220",
+            "text": "Form ST-220-CA, State Tax Law 5-a certification",
+            "found": true
+          },
+          {
+            "id": "mwbe-cert",
+            "text": "Provide the NYS MWBE or SDVOB certificate to earn quantitative points",
+            "found": true
+          },
+          {
+            "id": "mwbe-goal",
+            "text": "MWBE participation goal (30% agency-wide)",
+            "found": true
+          },
+          {
+            "id": "insurance",
+            "text": "Meet the insurance requirements",
+            "found": true
+          },
+          {
+            "id": "questions-email",
+            "text": "Send questions by email to the designated address",
+            "found": false
+          }
+        ],
+        "checklist_found": 9,
+        "checklist_total": 12,
+        "items": 122
+      },
+      "verification": {
+        "kept": 119,
+        "superseded": 2,
+        "rejected": 2,
+        "exact": 116,
+        "fuzzy": 2,
+        "assembled": 3,
+        "warnings": 5
+      },
+      "seconds": 292.5
+    },
+    {
+      "package": "nysed-24-026",
+      "title": "NYSED RFP #24-026: Audit Management Solution Software",
+      "model": {
+        "facts": {
+          "response_due": {
+            "correct": true,
+            "expected": "2026-01-13",
+            "got": "2026-01-13"
+          },
+          "questions_due": {
+            "correct": true,
+            "expected": "2025-12-23",
+            "got": "2025-12-23"
+          },
+          "submission_method": {
+            "correct": true,
+            "expected": "online form",
+            "got": "Submit documents via the online form in Microsoft Office or editable PDF."
+          },
+          "page_limit": {
+            "correct": true,
+            "expected": "25",
+            "got": "Technical Proposal is limited to 25 pages, excluding attachments and work samples."
+          },
+          "basis_of_award": {
+            "correct": true,
+            "expected": "highest | aggregate",
+            "got": "Award goes to vendor with highest aggregate technical and cost score."
+          },
+          "set_aside": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "naics": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          }
+        },
+        "facts_correct": 7,
+        "facts_total": 7,
+        "times_correct": 0,
+        "times_total": 0,
+        "factors": [
+          {
+            "name": "technical",
+            "weight": "70",
+            "found": true
+          },
+          {
+            "name": "cost",
+            "weight": "30",
+            "found": true
+          },
+          {
+            "name": "qualifications and experience",
+            "weight": "30",
+            "found": true
+          },
+          {
+            "name": "project approach",
+            "weight": "20",
+            "found": true
+          },
+          {
+            "name": "technical qualifications",
+            "weight": "20",
+            "found": true
+          }
+        ],
+        "factors_found": 5,
+        "factors_total": 5,
+        "checklist": [
+          {
+            "id": "four-files",
+            "text": "Submit four labeled documents: submission documents, technical proposal, cost proposal, M/WBE documents",
+            "found": true
+          },
+          {
+            "id": "ms-office",
+            "text": "Technical and cost proposals in Microsoft Office, not scanned PDF",
+            "found": true
+          },
+          {
+            "id": "signatures",
+            "text": "Sign submission documents with an accepted electronic signature method",
+            "found": true
+          },
+          {
+            "id": "no-cost-in-tech",
+            "text": "Keep cost information out of the technical proposal",
+            "found": true
+          },
+          {
+            "id": "whole-dollars",
+            "text": "Budgets in whole dollars",
+            "found": true
+          },
+          {
+            "id": "mwbe-goal",
+            "text": "M/WBE goal of 30% (17% MBE, 13% WBE)",
+            "found": true
+          },
+          {
+            "id": "sdvob-goal",
+            "text": "SDVOB participation goal of 6%",
+            "found": true
+          },
+          {
+            "id": "mwbe-forms",
+            "text": "Submit M/WBE 100 Utilization Plan, M/WBE 102 and EEO 100",
+            "found": true
+          },
+          {
+            "id": "subcontracting-cap",
+            "text": "Subcontracting limited to 30% of the contract budget",
+            "found": true
+          },
+          {
+            "id": "uptime",
+            "text": "Platform must maintain 99.9% uptime",
+            "found": true
+          },
+          {
+            "id": "foil",
+            "text": "Request FOIL exemption on the provided form for confidential material",
+            "found": true
+          },
+          {
+            "id": "rfp-number",
+            "text": "Include the RFP number and title on the online form",
+            "found": true
+          }
+        ],
+        "checklist_found": 12,
+        "checklist_total": 12,
+        "items": 208
+      },
+      "baseline": {
+        "facts": {
+          "response_due": {
+            "correct": true,
+            "expected": "2026-01-13",
+            "got": "2026-01-13"
+          },
+          "questions_due": {
+            "correct": true,
+            "expected": "2025-12-23",
+            "got": "2025-12-23"
+          },
+          "submission_method": {
+            "correct": true,
+            "expected": "online form",
+            "got": "Questions regarding the request must be submitted via online form no later than the close of business 12/23/2025."
+          },
+          "page_limit": {
+            "correct": true,
+            "expected": "25",
+            "got": "plan), should be limited to no more than 25 pages and should not include slide decks or other promotional material."
+          },
+          "basis_of_award": {
+            "correct": true,
+            "expected": "highest | aggregate",
+            "got": "If NYSED exercises the right to request best and final offers, the contract must be issued to the vendor with the highest aggregate technical and financial score that results from the best and final offer."
+          },
+          "set_aside": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "naics": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          }
+        },
+        "facts_correct": 7,
+        "facts_total": 7,
+        "times_correct": 0,
+        "times_total": 0,
+        "factors": [
+          {
+            "name": "technical",
+            "weight": "70",
+            "found": true
+          },
+          {
+            "name": "cost",
+            "weight": "30",
+            "found": true
+          },
+          {
+            "name": "qualifications and experience",
+            "weight": "30",
+            "found": true
+          },
+          {
+            "name": "project approach",
+            "weight": "20",
+            "found": true
+          },
+          {
+            "name": "technical qualifications",
+            "weight": "20",
+            "found": true
+          }
+        ],
+        "factors_found": 5,
+        "factors_total": 5,
+        "checklist": [
+          {
+            "id": "four-files",
+            "text": "Submit four labeled documents: submission documents, technical proposal, cost proposal, M/WBE documents",
+            "found": false
+          },
+          {
+            "id": "ms-office",
+            "text": "Technical and cost proposals in Microsoft Office, not scanned PDF",
+            "found": true
+          },
+          {
+            "id": "signatures",
+            "text": "Sign submission documents with an accepted electronic signature method",
+            "found": true
+          },
+          {
+            "id": "no-cost-in-tech",
+            "text": "Keep cost information out of the technical proposal",
+            "found": true
+          },
+          {
+            "id": "whole-dollars",
+            "text": "Budgets in whole dollars",
+            "found": true
+          },
+          {
+            "id": "mwbe-goal",
+            "text": "M/WBE goal of 30% (17% MBE, 13% WBE)",
+            "found": false
+          },
+          {
+            "id": "sdvob-goal",
+            "text": "SDVOB participation goal of 6%",
+            "found": false
+          },
+          {
+            "id": "mwbe-forms",
+            "text": "Submit M/WBE 100 Utilization Plan, M/WBE 102 and EEO 100",
+            "found": true
+          },
+          {
+            "id": "subcontracting-cap",
+            "text": "Subcontracting limited to 30% of the contract budget",
+            "found": false
+          },
+          {
+            "id": "uptime",
+            "text": "Platform must maintain 99.9% uptime",
+            "found": true
+          },
+          {
+            "id": "foil",
+            "text": "Request FOIL exemption on the provided form for confidential material",
+            "found": false
+          },
+          {
+            "id": "rfp-number",
+            "text": "Include the RFP number and title on the online form",
+            "found": true
+          }
+        ],
+        "checklist_found": 7,
+        "checklist_total": 12,
+        "items": 299
+      },
+      "verification": {
+        "kept": 208,
+        "superseded": 0,
+        "rejected": 0,
+        "exact": 208,
+        "fuzzy": 0,
+        "assembled": 0,
+        "warnings": 0
+      },
+      "seconds": 492.3
+    },
+    {
+      "package": "usgs-shakealert",
+      "title": "USGS ShakeAlert Code Review RFI",
+      "model": {
+        "facts": {
+          "response_due": {
+            "correct": true,
+            "expected": "2026-10-16",
+            "got": "2026-10-16",
+            "time_correct": true,
+            "expected_time": "12:00",
+            "got_time": "12:00"
+          },
+          "questions_due": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "submission_method": {
+            "correct": true,
+            "expected": "email | e-mail | emailed",
+            "got": "Submit responses via email to [name]; no phone, mail, or fax accepted."
+          },
+          "page_limit": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "basis_of_award": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "set_aside": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "naics": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          }
+        },
+        "facts_correct": 7,
+        "facts_total": 7,
+        "times_correct": 1,
+        "times_total": 1,
+        "factors": [],
+        "factors_found": 0,
+        "factors_total": 0,
+        "checklist": [
+          {
+            "id": "socioeconomic",
+            "text": "State the applicable socioeconomic designation",
+            "found": true
+          },
+          {
+            "id": "size",
+            "text": "State the business size standard",
+            "found": true
+          },
+          {
+            "id": "uei",
+            "text": "Give the SAM UEI number",
+            "found": true
+          },
+          {
+            "id": "gsa",
+            "text": "Give a GSA contract number if applicable",
+            "found": true
+          },
+          {
+            "id": "ability",
+            "text": "State the ability to execute all listed tasks",
+            "found": true
+          },
+          {
+            "id": "capability",
+            "text": "Submit a capability statement and general approach",
+            "found": true
+          },
+          {
+            "id": "pdf",
+            "text": "Submit electronically in PDF format",
+            "found": true
+          },
+          {
+            "id": "subject",
+            "text": "Use the required email subject line",
+            "found": true
+          },
+          {
+            "id": "no-phone",
+            "text": "No telephone, mail or fax responses",
+            "found": true
+          },
+          {
+            "id": "no-marketing",
+            "text": "General marketing material is not responsive",
+            "found": false
+          },
+          {
+            "id": "cicd",
+            "text": "Implement a baseline CI/CD pipeline in GitLab, not only recommend it (SOW)",
+            "found": true
+          },
+          {
+            "id": "module-review",
+            "text": "Review the source code of every production module (SOW)",
+            "found": true
+          }
+        ],
+        "checklist_found": 11,
+        "checklist_total": 12,
+        "items": 55
+      },
+      "baseline": {
+        "facts": {
+          "response_due": {
+            "correct": true,
+            "expected": "2026-10-16",
+            "got": "2026-10-16",
+            "time_correct": false,
+            "expected_time": "12:00",
+            "got_time": "no time"
+          },
+          "questions_due": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "submission_method": {
+            "correct": true,
+            "expected": "email | e-mail | emailed",
+            "got": "All responses should be submitted electronically in PDF format and emailed to the points of contact: [name] at [email]."
+          },
+          "page_limit": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "basis_of_award": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "set_aside": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "naics": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          }
+        },
+        "facts_correct": 7,
+        "facts_total": 7,
+        "times_correct": 0,
+        "times_total": 1,
+        "factors": [],
+        "factors_found": 0,
+        "factors_total": 0,
+        "checklist": [
+          {
+            "id": "socioeconomic",
+            "text": "State the applicable socioeconomic designation",
+            "found": false
+          },
+          {
+            "id": "size",
+            "text": "State the business size standard",
+            "found": false
+          },
+          {
+            "id": "uei",
+            "text": "Give the SAM UEI number",
+            "found": false
+          },
+          {
+            "id": "gsa",
+            "text": "Give a GSA contract number if applicable",
+            "found": false
+          },
+          {
+            "id": "ability",
+            "text": "State the ability to execute all listed tasks",
+            "found": false
+          },
+          {
+            "id": "capability",
+            "text": "Submit a capability statement and general approach",
+            "found": true
+          },
+          {
+            "id": "pdf",
+            "text": "Submit electronically in PDF format",
+            "found": true
+          },
+          {
+            "id": "subject",
+            "text": "Use the required email subject line",
+            "found": false
+          },
+          {
+            "id": "no-phone",
+            "text": "No telephone, mail or fax responses",
+            "found": false
+          },
+          {
+            "id": "no-marketing",
+            "text": "General marketing material is not responsive",
+            "found": true
+          },
+          {
+            "id": "cicd",
+            "text": "Implement a baseline CI/CD pipeline in GitLab, not only recommend it (SOW)",
+            "found": true
+          },
+          {
+            "id": "module-review",
+            "text": "Review the source code of every production module (SOW)",
+            "found": true
+          }
+        ],
+        "checklist_found": 5,
+        "checklist_total": 12,
+        "items": 50
+      },
+      "verification": {
+        "kept": 55,
+        "superseded": 0,
+        "rejected": 0,
+        "exact": 55,
+        "fuzzy": 0,
+        "assembled": 0,
+        "warnings": 0
+      },
+      "seconds": 118.2
+    },
+    {
+      "package": "af-tdl",
+      "title": "Air Force TDL Interoperability Software RFP (FA489026Q0016)",
+      "model": {
+        "facts": {
+          "response_due": {
+            "correct": true,
+            "expected": "2026-10-10",
+            "got": "2026-10-10",
+            "time_correct": true,
+            "expected_time": "13:00",
+            "got_time": "13:00"
+          },
+          "questions_due": {
+            "correct": true,
+            "expected": "2026-09-04",
+            "got": "2026-09-04",
+            "time_correct": true,
+            "expected_time": "15:00",
+            "got_time": "15:00"
+          },
+          "submission_method": {
+            "correct": true,
+            "expected": "email | e-mail",
+            "got": "Submit proposals via email to [name] and [name] by the deadline in Table 3."
+          },
+          "page_limit": {
+            "correct": true,
+            "expected": "30",
+            "got": "Technical Volume maximum page limit is 30 pages."
+          },
+          "basis_of_award": {
+            "correct": true,
+            "expected": "lowest price technically acceptable | lpta | lowest priced proposal",
+            "got": "Award goes to the lowest priced proposal meeting technical acceptability standards."
+          },
+          "set_aside": {
+            "correct": true,
+            "expected": "not set-aside | not set aside | unrestricted | set-aside: no | no small business set",
+            "got": "This solicitation is not set-aside for small business concerns."
+          },
+          "naics": {
+            "correct": true,
+            "expected": "541511",
+            "got": "The assigned NAICS code is 541511, Custom Computer Programming Services."
+          }
+        },
+        "facts_correct": 7,
+        "facts_total": 7,
+        "times_correct": 2,
+        "times_total": 2,
+        "factors": [
+          {
+            "name": "technical",
+            "weight": null,
+            "found": true
+          },
+          {
+            "name": "price",
+            "weight": null,
+            "found": true
+          }
+        ],
+        "factors_found": 2,
+        "factors_total": 2,
+        "checklist": [
+          {
+            "id": "volumes",
+            "text": "Submit two separate volumes, Technical and Price, as separately labeled files",
+            "found": true
+          },
+          {
+            "id": "font",
+            "text": "Font no smaller than Times New Roman 10",
+            "found": true
+          },
+          {
+            "id": "margins",
+            "text": "Margins no smaller than 1/2 inch",
+            "found": true
+          },
+          {
+            "id": "file-types",
+            "text": "Submit in PDF or Word (.docx)",
+            "found": true
+          },
+          {
+            "id": "sam",
+            "text": "Be registered in SAM at the time of proposal submission",
+            "found": true
+          },
+          {
+            "id": "question-matrix",
+            "text": "Submit questions on the Question-Comment Matrix",
+            "found": true
+          },
+          {
+            "id": "screenshots",
+            "text": "Include functional screenshots and workflow diagrams for sub-factors 1 and 2",
+            "found": true
+          },
+          {
+            "id": "cots",
+            "text": "Offer existing commercial off-the-shelf software; untested AI-generated software is not accepted",
+            "found": true
+          },
+          {
+            "id": "price-narrative",
+            "text": "Include a price narrative in the Price volume",
+            "found": true
+          },
+          {
+            "id": "cover-letter",
+            "text": "Price volume cover page with UEI, CAGE, business size and points of contact",
+            "found": true
+          },
+          {
+            "id": "valid-until",
+            "text": "State that the proposal is valid until 1 December 2026",
+            "found": true
+          },
+          {
+            "id": "clin",
+            "text": "Price according to the CLIN structure",
+            "found": true
+          }
+        ],
+        "checklist_found": 12,
+        "checklist_total": 12,
+        "items": 64
+      },
+      "baseline": {
+        "facts": {
+          "response_due": {
+            "correct": true,
+            "expected": "2026-10-10",
+            "got": "2026-10-10",
+            "time_correct": true,
+            "expected_time": "13:00",
+            "got_time": "13:00"
+          },
+          "questions_due": {
+            "correct": true,
+            "expected": "2026-09-04",
+            "got": "2026-09-04",
+            "time_correct": true,
+            "expected_time": "15:00",
+            "got_time": "15:00"
+          },
+          "submission_method": {
+            "correct": false,
+            "expected": "email | e-mail",
+            "got": "Questions and clarifications regarding this solicitation must be submitted in writing using the provided Question-Comment Matrix (Attachment 6) to the Contract Manager (CM), [name] at [email] AND t"
+          },
+          "page_limit": {
+            "correct": false,
+            "expected": "30",
+            "got": "not found"
+          },
+          "basis_of_award": {
+            "correct": false,
+            "expected": "lowest price technically acceptable | lpta | lowest priced proposal",
+            "got": "RFP Title TDL INTEROPERABILITY SOFTWARE & TRAINING Requiring Agency Air Combat Command Tactical Data Links and Connectivity Resources Division (ACC A5JR) Order Type Firm-Fixed Price (FFP) Not To Exceed Commercial Yes Res"
+          },
+          "set_aside": {
+            "correct": true,
+            "expected": "not set-aside | not set aside | unrestricted | set-aside: no | no small business set",
+            "got": "This solicitation is not set-aside for small business concerns."
+          },
+          "naics": {
+            "correct": true,
+            "expected": "541511",
+            "got": "RFP Title TDL INTEROPERABILITY SOFTWARE & TRAINING Requiring Agency Air Combat Command Tactical Data Links and Connectivity Resources Division (ACC A5JR) Order Type Firm-Fixed Price (FFP) Not To Exceed Commercial Yes Res"
+          }
+        },
+        "facts_correct": 4,
+        "facts_total": 7,
+        "times_correct": 2,
+        "times_total": 2,
+        "factors": [
+          {
+            "name": "technical",
+            "weight": null,
+            "found": false
+          },
+          {
+            "name": "price",
+            "weight": null,
+            "found": false
+          }
+        ],
+        "factors_found": 0,
+        "factors_total": 2,
+        "checklist": [
+          {
+            "id": "volumes",
+            "text": "Submit two separate volumes, Technical and Price, as separately labeled files",
+            "found": true
+          },
+          {
+            "id": "font",
+            "text": "Font no smaller than Times New Roman 10",
+            "found": true
+          },
+          {
+            "id": "margins",
+            "text": "Margins no smaller than 1/2 inch",
+            "found": true
+          },
+          {
+            "id": "file-types",
+            "text": "Submit in PDF or Word (.docx)",
+            "found": true
+          },
+          {
+            "id": "sam",
+            "text": "Be registered in SAM at the time of proposal submission",
+            "found": true
+          },
+          {
+            "id": "question-matrix",
+            "text": "Submit questions on the Question-Comment Matrix",
+            "found": true
+          },
+          {
+            "id": "screenshots",
+            "text": "Include functional screenshots and workflow diagrams for sub-factors 1 and 2",
+            "found": true
+          },
+          {
+            "id": "cots",
+            "text": "Offer existing commercial off-the-shelf software; untested AI-generated software is not accepted",
+            "found": true
+          },
+          {
+            "id": "price-narrative",
+            "text": "Include a price narrative in the Price volume",
+            "found": true
+          },
+          {
+            "id": "cover-letter",
+            "text": "Price volume cover page with UEI, CAGE, business size and points of contact",
+            "found": true
+          },
+          {
+            "id": "valid-until",
+            "text": "State that the proposal is valid until 1 December 2026",
+            "found": true
+          },
+          {
+            "id": "clin",
+            "text": "Price according to the CLIN structure",
+            "found": true
+          }
+        ],
+        "checklist_found": 12,
+        "checklist_total": 12,
+        "items": 104
+      },
+      "verification": {
+        "kept": 64,
+        "superseded": 0,
+        "rejected": 1,
+        "exact": 63,
+        "fuzzy": 0,
+        "assembled": 1,
+        "warnings": 1
+      },
+      "seconds": 201.4
+    },
+    {
+      "package": "ihs-75h70626r00032",
+      "title": "IHS Telecom Software Support Subscription (SDVOSB set-aside)",
+      "model": {
+        "facts": {
+          "response_due": {
+            "correct": true,
+            "expected": "2026-10-26",
+            "got": "2026-10-26",
+            "time_correct": true,
+            "expected_time": "17:00",
+            "got_time": "17:00"
+          },
+          "questions_due": {
+            "correct": true,
+            "expected": "2026-10-13",
+            "got": "2026-10-13",
+            "time_correct": true,
+            "expected_time": "12:00",
+            "got_time": "12:00"
+          },
+          "submission_method": {
+            "correct": true,
+            "expected": "email | e-mail",
+            "got": "Submit offers electronically via email to the Contract Specialist."
+          },
+          "page_limit": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "basis_of_award": {
+            "correct": true,
+            "expected": "lowest price technically acceptable | lpta",
+            "got": "Award will be made based on Lowest Price Technically Acceptable (LPTA)."
+          },
+          "set_aside": {
+            "correct": true,
+            "expected": "service-disabled | sdvosb | service disabled",
+            "got": "Solicitation is set aside for 100% Service-Disabled Veteran-Owned Small Business."
+          },
+          "naics": {
+            "correct": true,
+            "expected": "541519",
+            "got": "Associated NAICS Code is 541519 with a small business size standard of $34.0 million."
+          }
+        },
+        "facts_correct": 7,
+        "facts_total": 7,
+        "times_correct": 2,
+        "times_total": 2,
+        "factors": [
+          {
+            "name": "technical",
+            "weight": null,
+            "found": true
+          },
+          {
+            "name": "past performance",
+            "weight": null,
+            "found": true
+          },
+          {
+            "name": "price",
+            "weight": null,
+            "found": true
+          }
+        ],
+        "factors_found": 3,
+        "factors_total": 3,
+        "checklist": [
+          {
+            "id": "letterhead",
+            "text": "Submit the quote on company letterhead, signed and dated",
+            "found": true
+          },
+          {
+            "id": "sf1449",
+            "text": "Complete the SF1449",
+            "found": true
+          },
+          {
+            "id": "all-inclusive",
+            "text": "Quoted unit prices are all-inclusive, including travel",
+            "found": false
+          },
+          {
+            "id": "tech-description",
+            "text": "Technical description in enough detail to evaluate compliance",
+            "found": true
+          },
+          {
+            "id": "past-perf",
+            "text": "Past performance: recent, relevant CPARs",
+            "found": true
+          },
+          {
+            "id": "price-schedule",
+            "text": "Completed price schedule sheet",
+            "found": true
+          },
+          {
+            "id": "amendments",
+            "text": "Acknowledge any solicitation amendments",
+            "found": true
+          },
+          {
+            "id": "terms",
+            "text": "State the extent of agreement with all terms and conditions",
+            "found": true
+          },
+          {
+            "id": "sam-uei",
+            "text": "Have a UEI and TIN and be registered in SAM",
+            "found": true
+          },
+          {
+            "id": "no-discussions",
+            "text": "Award may be made without discussions, so the first offer should be the best",
+            "found": false
+          }
+        ],
+        "checklist_found": 8,
+        "checklist_total": 10,
+        "items": 64
+      },
+      "baseline": {
+        "facts": {
+          "response_due": {
+            "correct": true,
+            "expected": "2026-10-26",
+            "got": "2026-10-26",
+            "time_correct": true,
+            "expected_time": "17:00",
+            "got_time": "17:00"
+          },
+          "questions_due": {
+            "correct": false,
+            "expected": "2026-10-13",
+            "got": "not found"
+          },
+          "submission_method": {
+            "correct": true,
+            "expected": "email | e-mail",
+            "got": "Offers will be accepted electronically, Submit via e-mail to the following:"
+          },
+          "page_limit": {
+            "correct": true,
+            "expected": "not stated",
+            "got": "not stated"
+          },
+          "basis_of_award": {
+            "correct": true,
+            "expected": "lowest price technically acceptable | lpta",
+            "got": "FAR 52.212-2 Evaluation-Commercial Products and Commercial Services (DEVIATION DATE) Basis of Award is Lowest Price Technically Acceptable (LPTA)."
+          },
+          "set_aside": {
+            "correct": true,
+            "expected": "service-disabled | sdvosb | service disabled",
+            "got": "This Solicitation issued is set aside for 100% Service-Disabled Veteran-Owned Small Business."
+          },
+          "naics": {
+            "correct": true,
+            "expected": "541519",
+            "got": "The associated NAICS Code is 541519 \u2013 Other Computer Related Services, which has a small business size standard of $34.0 million."
+          }
+        },
+        "facts_correct": 6,
+        "facts_total": 7,
+        "times_correct": 1,
+        "times_total": 1,
+        "factors": [
+          {
+            "name": "technical",
+            "weight": null,
+            "found": false
+          },
+          {
+            "name": "past performance",
+            "weight": null,
+            "found": false
+          },
+          {
+            "name": "price",
+            "weight": null,
+            "found": false
+          }
+        ],
+        "factors_found": 0,
+        "factors_total": 3,
+        "checklist": [
+          {
+            "id": "letterhead",
+            "text": "Submit the quote on company letterhead, signed and dated",
+            "found": true
+          },
+          {
+            "id": "sf1449",
+            "text": "Complete the SF1449",
+            "found": false
+          },
+          {
+            "id": "all-inclusive",
+            "text": "Quoted unit prices are all-inclusive, including travel",
+            "found": true
+          },
+          {
+            "id": "tech-description",
+            "text": "Technical description in enough detail to evaluate compliance",
+            "found": false
+          },
+          {
+            "id": "past-perf",
+            "text": "Past performance: recent, relevant CPARs",
+            "found": true
+          },
+          {
+            "id": "price-schedule",
+            "text": "Completed price schedule sheet",
+            "found": false
+          },
+          {
+            "id": "amendments",
+            "text": "Acknowledge any solicitation amendments",
+            "found": false
+          },
+          {
+            "id": "terms",
+            "text": "State the extent of agreement with all terms and conditions",
+            "found": true
+          },
+          {
+            "id": "sam-uei",
+            "text": "Have a UEI and TIN and be registered in SAM",
+            "found": true
+          },
+          {
+            "id": "no-discussions",
+            "text": "Award may be made without discussions, so the first offer should be the best",
+            "found": true
+          }
+        ],
+        "checklist_found": 6,
+        "checklist_total": 10,
+        "items": 77
+      },
+      "verification": {
+        "kept": 64,
+        "superseded": 0,
+        "rejected": 0,
+        "exact": 61,
+        "fuzzy": 1,
+        "assembled": 2,
+        "warnings": 3
+      },
+      "seconds": 13.9
+    }
+  ],
+  "totals": {
+    "model": {
+      "facts_correct": 34,
+      "facts_total": 35,
+      "times_correct": 6,
+      "times_total": 6,
+      "factors_found": 15,
+      "factors_total": 15,
+      "checklist_found": 55,
+      "checklist_total": 58,
+      "items": 510
+    },
+    "baseline": {
+      "facts_correct": 29,
+      "facts_total": 35,
+      "times_correct": 4,
+      "times_total": 5,
+      "factors_found": 10,
+      "factors_total": 15,
+      "checklist_found": 39,
+      "checklist_total": 58,
+      "items": 652
+    },
+    "verification": {
+      "kept": 510,
+      "rejected": 3,
+      "exact": 503,
+      "fuzzy": 3,
+      "assembled": 6,
+      "warnings": 9,
+      "superseded": 2
+    }
+  }
+}

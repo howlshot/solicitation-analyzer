@@ -24,12 +24,18 @@ LABELS = {
 
 
 def main() -> None:
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--reports", default="reports")
+    parser.add_argument("--out", default="eval", help="Folder for results.json and RESULTS.md.")
+    args = parser.parse_args()
     manifest = json.loads((ROOT / "samples/manifest.json").read_text())
     docs = {d["id"]: d for d in manifest["documents"]}
     results = []
     for pkg in manifest["packages"]:
         gold = json.loads((ROOT / f"eval/gold/{pkg['id']}.json").read_text())
-        report_path = ROOT / f"reports/{pkg['id']}/report.json"
+        report_path = ROOT / args.reports / pkg["id"] / "report.json"
         if not report_path.exists():
             print(f"skip {pkg['id']}: no report yet")
             continue
@@ -55,8 +61,10 @@ def main() -> None:
         totals[who] = {k: sum(r[who][k] for r in results) for k in ["facts_correct", "facts_total", "times_correct", "times_total", "factors_found", "factors_total", "checklist_found", "checklist_total", "items"]}
     totals["verification"] = {k: sum(r["verification"].get(k, 0) for r in results) for k in ["kept", "rejected", "exact", "fuzzy", "assembled", "warnings", "superseded"]}
     out = {"model": json.loads(report_path.read_text())["model"], "packages": results, "totals": totals}
-    (ROOT / "eval/results.json").write_text(json.dumps(out, indent=2) + "\n")
-    (ROOT / "eval/RESULTS.md").write_text(markdown(out))
+    out_dir = ROOT / args.out
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "results.json").write_text(json.dumps(out, indent=2) + "\n")
+    (out_dir / "RESULTS.md").write_text(markdown(out))
     print(markdown(out))
 
 
