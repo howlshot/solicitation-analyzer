@@ -19,25 +19,22 @@ Language models summarize documents well and occasionally invent a detail with c
 
 ## Results on public solicitations
 
-The test set is 8 public documents in 5 packages: two New York State RFPs, a federal RFI with its statement of work, an Air Force RFP with its amendment, and an Indian Health Service SDVOSB set-aside. Reference answers in [`eval/gold/`](eval/gold) were written by reading each document. The same questions are put to a keyword baseline with no model, so the numbers show what the model adds.
+8 public documents in 5 packages (NYS, federal RFI, Air Force RFP with amendment, IHS SDVOSB set-aside), scored against hand-written answers in [`eval/gold/`](eval/gold) and against a keyword search with no model.
 
-| Measure | Model (local Qwen 3.8 27B) | Keyword baseline |
+| Measure | Model | Keyword baseline |
 |---|---:|---:|
-| Key facts right: due dates, questions deadline, how to submit, page limit, basis of award, set-aside, NAICS | 34/35 (97%) | 29/35 (83%) |
+| Key facts right | 34/35 | 29/35 |
 | Deadline times right | 6/6 | 4/5 |
-| Evaluation factors found, with weights | 15/15 (100%) | 10/15 (67%) |
-| Must-do checklist items covered | 57/58 (98%) | 39/58 (67%) |
+| Evaluation factors found | 15/15 | 10/15 |
+| Must-do items covered | 57/58 | 39/58 |
 
-**Quote check:** of 718 model items, 705 quotes were found word for word, 6 were close matches, 7 were read across table cells and flagged, and 2 were removed. Both removals were two-word fragments ("2. Price") too short to check. Two deadlines were replaced by amendments, including ESD's Addendum 2 moving proposals from August 7 to August 13, 2026.
+Quote check: 718 items, 2 removed (both two-word fragments). Two deadlines were replaced by amendments.
 
 ![The ESD deadline: the Addendum 2 date with its strikethrough warning, and the original date struck through](docs/amendment.png)
 
-**Read these numbers with three caveats:**
-- The reference answers were written by the same team that built the tool.
-- The first run on this set exposed checker gaps, and the fixes were then measured on the same documents. Those gaps were quotes running across a page break, two-column pages and tables. The wording rules that sort set-aside, NAICS and questions-deadline lines were also added after reading that run. A held-out set of solicitations is the next step.
-- Speed: all 129 pages took about 50 minutes on an Apple M5 Max with four requests at a time. A 2-page RFI with its 9-page statement of work took about 4 minutes in the web page. A hosted model is much faster.
+Caveats: the answers were written by the builder, and the checker was improved on these same documents.
 
-Full per-package results: [`eval/RESULTS.md`](eval/RESULTS.md). Browse the sample reports at **https://howlshot.github.io/solicitation-analyzer/** (saved outputs; nothing runs and no key is needed).
+Details: [`eval/RESULTS.md`](eval/RESULTS.md). Sample reports: **https://howlshot.github.io/solicitation-analyzer/**
 
 ## Models tested
 
